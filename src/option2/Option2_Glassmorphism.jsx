@@ -185,15 +185,15 @@ export default function Option2Glassmorphism() {
   const msgContainerRef                 = useRef(null);
 
   const t = darkMode ? {
-    bg:               '#0f0c1e',
+    bg: 'linear-gradient(135deg, #0f0a2e 0%, #1a0a4a 50%, #0a1628 100%)',
     text:             '#e8e0ff',
-    textMuted:        'rgba(200,185,255,0.55)',
+    textMuted:        'rgba(255,255,255,0.5)',
     textFaint:        'rgba(200,185,255,0.38)',
     textVeryFaint:    'rgba(200,185,255,0.22)',
     divider:          'rgba(109,68,255,0.18)',
     navActive:        'rgba(109,68,255,0.28)',
     sidebarActive:    'rgba(75,52,135,0.8)',
-    sidebarInactive:  'rgba(200,185,255,0.55)',
+    sidebarInactive:  'rgba(200,185,255,1)',
     inputBg:          'rgba(20,15,45,0.85)',
     chatAiBubble:     'rgba(28,20,62,0.9)',
     chatAiBorder:     'rgba(255,255,255,0.1)',
@@ -714,7 +714,7 @@ export default function Option2Glassmorphism() {
             <span style={{ fontSize: '10px', fontWeight: 700, color: t.textFaint, letterSpacing: '0.12em', textTransform: 'uppercase' }}>Mis Cursos</span>
           </div>
           {COURSES.map(c => (
-            <button key={c.id} onClick={() => { setActiveCourse(activeCourse === c.name ? null : c.name); if (activeNav !== 'Cursos') setActiveNav('Tablero'); }} className={`gm-course-btn${activeCourse === c.name ? ' gm-active' : ''}`} style={{ width: '100%', padding: '10px 14px', background: activeCourse === c.name ? t.sidebarActive : `linear-gradient(to top, ${c.color}25,transparent)`, border: `1px solid ${activeCourse === c.name ? 'rgba(255,255,255,0.8)' : c.color + '40'}`, borderRadius: '12px', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', fontFamily: 'Nunito, sans-serif', fontSize: '12px', fontWeight: activeCourse === c.name ? 700 : 500, color: activeCourse === c.name ? t.text : t.sidebarInactive }}>
+            <button key={c.id} onClick={() => { setActiveCourse(activeCourse === c.name ? null : c.name); if (activeNav !== 'Cursos') setActiveNav('Tablero'); }} className={`gm-course-btn${activeCourse === c.name ? ' gm-active' : ''}`} style={{ width: '100%', padding: '10px 14px', background: activeCourse === c.name ? t.sidebarActive : `linear-gradient(to top, ${c.color}35,transparent)`, border: `1px solid ${activeCourse === c.name ? 'rgba(255,255,255,0.8)' : c.color + '40'}`, borderRadius: '12px', textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', fontFamily: 'Nunito, sans-serif', fontSize: '12px', fontWeight: activeCourse === c.name ? 700 : 500, color: activeCourse === c.name ? t.text : t.sidebarInactive }}>
               <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: c.color, flexShrink: 0, boxShadow: `0 0 6px ${c.color}60` }} />
               <span style={{ flex: 1, lineHeight: '1.3' }}>{c.name}</span>
               {c.tasks > 0 && <span style={{ background: c.bg, color: c.color, borderRadius: '999px', fontSize: '10px', fontWeight: 700, padding: '1px 6px' }}>{c.tasks}</span>}
