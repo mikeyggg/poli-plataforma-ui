@@ -198,7 +198,7 @@ const getAIResponse = (txt) => {
 /* ─── COMPONENT ─────────────────────────────────────────── */
 export default function TeacherDashboard() {
   const [activeNav, setActiveNav] = useState('Mis Cursos');
-  const [darkMode, setDarkMode]   = useState(false);
+  const [darkMode, setDarkMode]   = useState(true);
   const [chatOpen, setChatOpen]   = useState(false);
   const [messages, setMessages]   = useState(INIT_MSGS);
   const [inputText, setInputText] = useState('');

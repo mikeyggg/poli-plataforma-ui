@@ -180,7 +180,7 @@ export default function Option2Glassmorphism() {
   const [activeNav, setActiveNav]       = useState('Tablero');
   const [isTyping, setIsTyping]         = useState(false);
   const [openMsg, setOpenMsg]           = useState(null);
-  const [darkMode, setDarkMode]         = useState(false);
+  const [darkMode, setDarkMode]         = useState(true);
   const [chatOpen, setChatOpen]         = useState(false);
   const msgContainerRef                 = useRef(null);
 
